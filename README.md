@@ -1,1 +1,1 @@
-# Douban_LSTM
+# 基于LSTM的豆瓣影评情感分析
