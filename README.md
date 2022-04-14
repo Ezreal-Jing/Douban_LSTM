@@ -10,11 +10,13 @@
 
 1.word2sequence.py——构建将文本转换为序列的方法
 
-2.build_vocab——使用word2sequence按词频构建词表
+2.build_vocab——使用word2sequence按词频构建词表，注意调用了dataset.py中的数据集
 
-3.model.py——模型构建、训练、评估
+3.dataset.py——使用pytorch内置的方法导入数据集，并进行数据过滤、分词、转换为Long tensor等操作
 
-4.lib.py——定义相关参数
+4.model.py——模型构建、训练、评估以及简单可视化
+
+5.lib.py——用于定义相关参数，单独写出便于修改
 
 ## 具体细节
 
