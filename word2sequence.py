@@ -7,7 +7,7 @@
 """
 文本序列化
 """
-class Word2sequence:
+class Word2Sequence:
     UNK_TAG = "UNK"#未出现的词
     PAD_TAG = "PAD"#填充词
 
@@ -30,7 +30,7 @@ class Word2sequence:
         for word in sentence:
             self.count[word] = self.count.get(word,0) + 1#将word存储到count里
 
-    def build_vocab(self, min_count=0, max_count=None, max_features=None):
+    def build_vocab(self, min_count=0, max_count=None, max_features=10000):
         """
         根据条件构建 词典
         :param min_count:最小词频
@@ -85,7 +85,7 @@ if __name__ == '__main__':
     sentences = [["今天", "天气", "很", "好"],
                  ["今天", "去", "吃", "什么"]]
 
-    ws = Word2sequence()
+    ws = Word2Sequence()
     for sentence in sentences:
         ws.fit(sentence)
     ws.build_vocab(min_count=0)
